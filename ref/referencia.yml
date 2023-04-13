@@ -1,16 +1,15 @@
-spring:
-  application:
-    name: 'referencia'
+spring:    
   datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=proxypay
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    username: sa
     password: Brasilangola@2310
     tomcat:
       max-active: '50'
       max-idle: '20'
       max-wait: '20000'
       min-idle: '15'
-    url: jdbc:sqlserver://localhost:1433;databaseName=proxypay
-    username: 'sa'
+    
   jpa:
     hibernate:
       ddl-auto: update
@@ -21,7 +20,7 @@ spring:
         id:
           new_generator_mappings: 'false'
     show-sql: false
-    
+
 logging:
   level:
     org:
